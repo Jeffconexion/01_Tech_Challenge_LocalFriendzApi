@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_Presentation", "1_Presentation", "{0FD124A9-1519-41F5-8F36-32A80484C8C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_Application", "2_Application", "{0EDA6695-41D0-442E-8741-5B57C795F9E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3_Domain", "3_Domain", "{32999400-513D-47A2-8EAF-5D0E14FB233D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4_Infrastructure", "4_Infrastructure", "{1EB80F78-0A4D-4D54-8D3F-2761D174BEF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5_Tests", "5_Tests", "{C3FB2248-8128-48AB-AAB6-A149DD8EC1CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalFriendzApi.UI", "src\LocalFriendzApi.UI\LocalFriendzApi.UI.csproj", "{63C90911-C026-4631-9D38-645FECCFF080}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalFriendzApi.Application", "src\LocalFriendzApi.Application\LocalFriendzApi.Application.csproj", "{81C54E7B-D0F7-4135-A5B4-11D1DC6CAD6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalFriendzApi.Domain", "src\LocalFriendzApi.Domain\LocalFriendzApi.Domain.csproj", "{7D726887-9AE0-42BC-9E5F-3F775528A7DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5_1_Unit_Tests", "5_1_Unit_Tests", "{83FC5A00-47F6-4134-80F8-A4F88781AF57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5_2_Tests_Integration", "5_2_Tests_Integration", "{88EEF56A-50A2-4335-9D94-DD8B9F56CE29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalFriendzApi.UnitTests", "tests\LocalFriendzApi.UnitTests\LocalFriendzApi.UnitTests.csproj", "{69E65034-EC33-4932-92B8-F3A9BA6AA27F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalFriendzApi.Infrastructure", "src\LocalFriendzApi.Infrastructure\LocalFriendzApi.Infrastructure.csproj", "{D035CE83-A663-41CE-9452-13C26DE93E2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63C90911-C026-4631-9D38-645FECCFF080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C90911-C026-4631-9D38-645FECCFF080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C90911-C026-4631-9D38-645FECCFF080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C90911-C026-4631-9D38-645FECCFF080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81C54E7B-D0F7-4135-A5B4-11D1DC6CAD6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81C54E7B-D0F7-4135-A5B4-11D1DC6CAD6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81C54E7B-D0F7-4135-A5B4-11D1DC6CAD6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81C54E7B-D0F7-4135-A5B4-11D1DC6CAD6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D726887-9AE0-42BC-9E5F-3F775528A7DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D726887-9AE0-42BC-9E5F-3F775528A7DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D726887-9AE0-42BC-9E5F-3F775528A7DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D726887-9AE0-42BC-9E5F-3F775528A7DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E65034-EC33-4932-92B8-F3A9BA6AA27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E65034-EC33-4932-92B8-F3A9BA6AA27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E65034-EC33-4932-92B8-F3A9BA6AA27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E65034-EC33-4932-92B8-F3A9BA6AA27F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D035CE83-A663-41CE-9452-13C26DE93E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D035CE83-A663-41CE-9452-13C26DE93E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D035CE83-A663-41CE-9452-13C26DE93E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D035CE83-A663-41CE-9452-13C26DE93E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63C90911-C026-4631-9D38-645FECCFF080} = {0FD124A9-1519-41F5-8F36-32A80484C8C6}
+		{81C54E7B-D0F7-4135-A5B4-11D1DC6CAD6F} = {0EDA6695-41D0-442E-8741-5B57C795F9E5}
+		{7D726887-9AE0-42BC-9E5F-3F775528A7DA} = {32999400-513D-47A2-8EAF-5D0E14FB233D}
+		{83FC5A00-47F6-4134-80F8-A4F88781AF57} = {C3FB2248-8128-48AB-AAB6-A149DD8EC1CE}
+		{88EEF56A-50A2-4335-9D94-DD8B9F56CE29} = {C3FB2248-8128-48AB-AAB6-A149DD8EC1CE}
+		{69E65034-EC33-4932-92B8-F3A9BA6AA27F} = {83FC5A00-47F6-4134-80F8-A4F88781AF57}
+		{D035CE83-A663-41CE-9452-13C26DE93E2D} = {1EB80F78-0A4D-4D54-8D3F-2761D174BEF7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BA06ADB-07B3-4EDB-A3F8-C403BE8B29AF}
+	EndGlobalSection
+EndGlobal
