@@ -10,6 +10,7 @@ builder.AddServices();
 builder.AddDocumentation();
 builder.AddLogging();
 builder.ExternalServices();
+builder.AddFluentValidation();
 
 var app = builder.Build();
 app.MapEndpoints();

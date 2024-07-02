@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LocalFriendzApi.Domain\LocalFriendzApi.Domain.csproj" />
+    <ProjectReference Include="..\LocalFriendzApi.Infrastructure\LocalFriendzApi.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

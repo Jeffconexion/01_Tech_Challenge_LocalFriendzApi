@@ -4,7 +4,7 @@ namespace LocalFriendzApi.Domain.IRepositories
 {
     public interface IContactRepository : IRepository<Contact>
     {
-        Task<IEnumerable<Contact>> GetContactByCodeRegion();
-        Task<ExternalAreaCode> GetExternalAreaCode();
+        Task<IEnumerable<Contact>> GetContactByCodeRegion(string codeRegion);
+        Task<IEnumerable<Contact>> GetAllContactWithAreaCode();
     }
 }

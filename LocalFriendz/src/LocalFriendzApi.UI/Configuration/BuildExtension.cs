@@ -1,5 +1,7 @@
-﻿using LocalFriendzApi.Application.IServices;
+﻿using FluentValidation;
+using LocalFriendzApi.Application.IServices;
 using LocalFriendzApi.Application.Services;
+using LocalFriendzApi.Application.Validations;
 using LocalFriendzApi.Domain.IRepositories;
 using LocalFriendzApi.Infrastructure.Data.Context;
 using LocalFriendzApi.Infrastructure.ExternalServices.Interfaces;
@@ -7,6 +9,7 @@ using LocalFriendzApi.Infrastructure.Logging;
 using LocalFriendzApi.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Refit;
+
 
 namespace LocalFriendzApi.UI.Configuration
 {
@@ -70,5 +73,12 @@ namespace LocalFriendzApi.UI.Configuration
             .AddRefitClient<IAreaCodeExternalService>()
             .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://brasilapi.com.br/api"));
         }
+
+        public static void AddFluentValidation(this WebApplicationBuilder builder)
+        {
+            builder.Services.AddValidatorsFromAssemblyContaining<CreateContactRequestValidator>();
+        }
     }
 }
+
+

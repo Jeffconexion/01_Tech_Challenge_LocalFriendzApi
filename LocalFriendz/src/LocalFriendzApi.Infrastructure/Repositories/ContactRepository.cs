@@ -1,27 +1,26 @@
 ﻿using LocalFriendzApi.Domain.IRepositories;
 using LocalFriendzApi.Domain.Models;
 using LocalFriendzApi.Infrastructure.Data.Context;
-using LocalFriendzApi.Infrastructure.ExternalServices.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace LocalFriendzApi.Infrastructure.Repositories
 {
     public class ContactRepository : Repository<Contact>, IContactRepository
     {
-        private readonly IAreaCodeExternalService _areaCodeExternalService;
-        public ContactRepository(AppDbContext context, IAreaCodeExternalService areaCodeExternalService) : base(context) { _areaCodeExternalService = areaCodeExternalService; }
 
-        public async Task<IEnumerable<Contact>> GetContactByCodeRegion()
+        public ContactRepository(AppDbContext context) : base(context) { }
+
+        public async Task<IEnumerable<Contact>> GetContactByCodeRegion(string codeRegion)
         {
             return Db.Contacts.AsNoTracking()
-                     .Where(c => c.AreaCode.CodeRegion.Equals("79"))
+                     .Where(c => c.AreaCode.CodeRegion.Equals(codeRegion))
                      .Include(c => c.AreaCode);
         }
 
-        public async Task<ExternalAreaCode> GetExternalAreaCode()
+        public async Task<IEnumerable<Contact>> GetAllContactWithAreaCode()
         {
-            var result = await _areaCodeExternalService.GetAreaCode(21);
-            return result;
+            return Db.Contacts.AsNoTracking()
+                     .Include(c => c.AreaCode);
         }
     }
 }
