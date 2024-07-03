@@ -23,7 +23,7 @@ Para esclarecimento foi desenvolvido o domain storytelling. Esse vai ser o fluxo
     - Adiciona novos contatos, incluindo nome, telefone e e-mail.
     - Cada contato está associado a um DDD correspondente a região.
     - Validações para garantir dados consistentes.
-- GET /contact//api/list-all e /contact//api/list-by-filter
+- GET /contact/api/list-all e /contact/api/list-by-filter
     - Consulta contatos.
     - Possibilidade de filtrar pelo DDD.
     - Validações para garantir dados consistentes.
