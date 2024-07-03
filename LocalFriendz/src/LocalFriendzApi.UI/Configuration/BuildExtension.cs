@@ -77,6 +77,7 @@ namespace LocalFriendzApi.UI.Configuration
         public static void AddFluentValidation(this WebApplicationBuilder builder)
         {
             builder.Services.AddValidatorsFromAssemblyContaining<CreateContactRequestValidator>();
+            builder.Services.AddValidatorsFromAssemblyContaining<UpdateContactRequestValidator>();
         }
     }
 }

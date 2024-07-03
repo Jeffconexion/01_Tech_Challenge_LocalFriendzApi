@@ -19,18 +19,18 @@ Para esclarecimento foi desenvolvido o domain storytelling. Esse vai ser o fluxo
 
 # Endpoints
 
-- POST /api/create-contact
+- POST /contact/api/create
     - Adiciona novos contatos, incluindo nome, telefone e e-mail.
     - Cada contato está associado a um DDD correspondente a região.
     - Validações para garantir dados consistentes.
-- GET /api/list-all e /api/list-by-filter
+- GET /contact//api/list-all e /contact//api/list-by-filter
     - Consulta contatos.
     - Possibilidade de filtrar pelo DDD.
     - Validações para garantir dados consistentes.
-- PUT /api/update-contact
+- PUT /contact/api/update
     - Atualização de contatos previamente cadastrado.
     - Validações para garantir dados consistentes.
-- DELETE /api/delete-contact
+- DELETE /contact/api/delete
     - Exclusão de contatos previamente cadastrado.
     - Validações para garantir dados consistentes.
 
@@ -41,6 +41,12 @@ Para esclarecimento foi desenvolvido o domain storytelling. Esse vai ser o fluxo
 - **Entity Framework**: ORM (Object-Relational Mapping) utilizado para interagir com o banco de dados.
 - **xUnit**: Framework de testes utilizado para realizar testes unitários.
 - **SQL Server**: Banco de dados relacional usado para armazenar os dados da aplicação.
+
+# Teste de Unidade
+
+Foram adicionados testes de unidades nas principais classes.
+
+![Teste de unidade]()
 
 # Banco de Dados
 

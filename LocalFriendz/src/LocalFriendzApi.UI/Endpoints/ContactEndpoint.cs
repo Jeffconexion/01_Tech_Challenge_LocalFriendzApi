@@ -13,9 +13,9 @@ namespace LocalFriendzApi.UI.Endpoints
     {
         public static void MapEndpoints(this WebApplication app)
         {
-            var contactGroup = app.MapGroup("/Contact");
+            var contactGroup = app.MapGroup("/contact");
 
-            contactGroup.MapPost("api/create-contact", async (IContactServices contactServices, IAreaCodeExternalService areaCodeExternalService, IValidator<CreateContactRequest> validator, CreateContactRequest request) =>
+            contactGroup.MapPost("api/create", async (IContactServices contactServices, IAreaCodeExternalService areaCodeExternalService, IValidator<CreateContactRequest> validator, CreateContactRequest request) =>
             {
 
                 var validationResult = await validator.ValidateAsync(request);
@@ -78,7 +78,7 @@ namespace LocalFriendzApi.UI.Endpoints
             .Produces((int)HttpStatusCode.InternalServerError)
             .WithOpenApi();
 
-            contactGroup.MapPut("api/update-contact", async (IContactServices contactServices, Guid id, IValidator<UpdateContactRequest> validator, UpdateContactRequest request) =>
+            contactGroup.MapPut("api/update", async (IContactServices contactServices, Guid id, IValidator<UpdateContactRequest> validator, UpdateContactRequest request) =>
             {
                 var validationResult = await validator.ValidateAsync(request);
 
@@ -100,7 +100,7 @@ namespace LocalFriendzApi.UI.Endpoints
             .Produces((int)HttpStatusCode.InternalServerError)
             .WithOpenApi();
 
-            contactGroup.MapDelete("api/delete-contact", async (IContactServices contactServices, Guid id) =>
+            contactGroup.MapDelete("api/delete", async (IContactServices contactServices, Guid id) =>
             {
                 var response = await contactServices.DeleteContact(id);
                 return response.ConfigureResponseStatus();
